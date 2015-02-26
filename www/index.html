@@ -759,9 +759,8 @@
             app.initialize();
             setTimeout(function(){
                 if (typeof admob !=="undefined") {
-                    admob.createBannerView();
-                    admob.requestInterstitialAd();
-                    setTimeout(function(){admob.showInterstitialAd();},300);
+                    app.createBannerView();
+                    app.requestInterstitial(true);
                 }
             },300);
         </script>
