@@ -28,7 +28,7 @@ var app = {
   // global vars
   autoShowInterstitial: false,
   progressDialog: document.getElementById("progressDialog"),
-  spinner: document.getElementById("spinner"),
+  spinner: document.getElementById("spinnner"),
   weinre: {
     enabled: false,
     ip: '', // ex. http://192.168.1.13
