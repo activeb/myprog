@@ -1,0 +1,758 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//FR"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+   <HEAD>
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <TITLE>Télévison en ligne et en direct sur internet – TV en live</TITLE>
+	 <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	 <link rel="stylesheet" type="text/css" media="all" href="css/normalize.css" />
+	 <link rel="stylesheet" href="js/owl-carousel/owl.carousel.css"/>
+	 <link rel="stylesheet" href="js/owl-carousel/owl.theme.css"/>
+	 <link rel="stylesheet" href="js/slick/slick.css"/>
+	 <link rel="stylesheet" href="js/slick/slick-theme.css"/>
+	 <link rel="stylesheet" type="text/css" media="all" href="css/jquery-ui.css" />
+	 <link rel="stylesheet" type="text/css" media="all" href="css/style.css?foo=12" />
+	 <style>html { -webkit-text-size-adjust: 100%; }</style>
+	 <script src="js/jquery-latest.min.js"></script>
+	 <script src="js/jquery-ui.min.js"></script>
+	 <script src="js/fastclick.js"></script>
+	 <script src="js/jquery.touchwipe.1.1.1.js"></script>
+	 <script src="js/owl-carousel/owl.carousel.js"></script>
+	 <script type="text/javascript" src="js/slick/slick.min.js"></script>
+	 <script src="js/jquery.mobile-1.4.5.min.js"></script>
+	 <!--script src="js/cordova.js"></script>
+	 <script src="js/LocalNotification.js"></script-->
+	 
+         <!--script type="text/javascript" src="js/AdMob.js"></script-->
+        
+	<script>
+	     var action,poos,ttime,ddate,dpoos,pdate,ptime;
+        </script>
+   </HEAD>
+   <BODY onresize="app.onResize()">
+      <div id="spinner">
+	<div class="container">
+		<div class="loading1">
+			<div class="vertical-div">
+				<div class="load-title">
+					<img src="css/images/loader.png">
+				</div>
+				<div class="load-text">
+					<img src="css/images/Chargement.png">
+				</div>
+				<div id="inner-spinner">
+			    	<div id="innersp-activ"></div>
+		       </div>
+	       </div>
+		</div>
+   	</div>
+      </div>
+      
+      <div data-role="page" class="ui-responsive-panel">
+	 
+	  <script>
+	//    var admobid = {};
+	//    if( /(android)/i.test(navigator.userAgent) ) { 
+	//	admobid = { // for Android
+	//	    banner: 'ca-app-pub-6869992474017983/9375997553',
+	//	    interstitial: 'ca-app-pub-6869992474017983/1657046752'
+	//	};
+	//    } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+	//	admobid = { // for iOS
+	//	    banner: 'ca-app-pub-6869992474017983/4806197152',
+	//	    interstitial: 'ca-app-pub-6869992474017983/7563979554'
+	//	};
+	//    } else {
+	//	admobid = { // for Windows Phone
+	//	    banner: 'ca-app-pub-6869992474017983/8878394753',
+	//	    interstitial: 'ca-app-pub-6869992474017983/1355127956'
+	//	};
+	//    }
+	//    
+	//    function initApp() {
+	//	if (AdMob) {
+	//	    AdMob.createBanner({
+	//		adId : admobid.banner,
+	//		position : AdMob.AD_POSITION.BOTTOM_CENTER,
+	//		autoShow : true
+	//	    });
+	//	}
+	//    }
+	//    
+	//    document.addEventListener('deviceready', initApp, false);
+	//    document.addEventListener("deviceready", onDeviceReady, false);
+	//       function onDeviceReady() {
+	//	  window.addEventListener('load', function() {
+	//		new FastClick(document.body);
+	//	  }, false);
+	//       }
+	 </script>
+	  
+	    <div data-role="header" data-theme="f" id="menu-head" class="menu app">
+		    <h1></h1>
+		    <a href="#nav-panel" data-icon="bars" data-iconpos="notext" class="ui-nodisc-icon" data-iconshadow="false">Menu</a>
+		    <a id="back" class="ui-nodisc-icon" data-actt="" data-icon="carat-l" data-iconpos="notext" data-iconshadow="false">Back</a>
+	    </div><!-- /header -->
+	    <div data-role="content" id="page" class="blabla">
+		  <div id="zload">
+                        <img src="http://myprogrammetv.fr/phoneg/css/images/giphy.gif" />
+                        <!--div class="progress"><div>Loading…</div></div-->
+		 </div>
+		  <div id = "page-cont">
+		     
+		  </div>
+	    </div>
+	    <div data-role="panel" data-position="left" data-position-fixed="false" data-display="reveal" id="nav-panel" data-theme="a">
+
+		  <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+			  <li data-filtertext="wai-aria voiceover accessibility screen reader" data-icon="false">
+				  <a class = "tvd" onclick="goo('tvd')"> <img src="css/images/tv-direct.png"/>Tv-Online</a>
+			  </li>
+			  <li data-filtertext="wai-aria voiceover accessibility screen reader" data-icon="false">
+				  <a class = "prog" onclick="goo('prog')"> <img src="css/images/online-new.png"/>Programme</a>
+			  </li>
+			  <li data-filtertext="accordions collapsible set collapsible-set collapsed" data-icon="false">
+				  <a class = "wth" onclick="goo('wth')"> <img src="css/images/meteo-new.png"/>Weather</a>
+			  </li>
+			  <li data-filtertext="accordions collapsible set collapsible-set collapsed" data-icon="false">
+				  <a id="sports" class = "sports" rel="external" onclick="goo('sports');"> <img src="css/images/sports-new.png"/>Sports</a>
+			  </li>
+			  <li data-filtertext="accordions collapsible set collapsible-set collapsed" data-icon="false">
+				  <a id="radio" class = "radio" rel="external" onclick="goo('radio');"> <img src="css/images/radio-new.png"/>Radio</a>
+			  </li>
+		  </ul>
+	    </div>
+      </div>
+      	 
+	
+	 <script>
+	   
+	    function goo(vari){
+	       switch(vari){
+		  case 'tvd':
+		     loader(3500);
+		     $('body #nav-panel').panel('close');
+                     setTimeout(function(){
+		     $.ajax({
+			   url: 	"http://myprogrammetv.fr/phoneg/tv-direct.php",
+			   dataType:	"html",
+			   async:	true,
+			   beforesend:	function(){
+			   },
+			   success:	function(data){
+			      $('body #page #page-cont').empty().append(data);
+			      $('body #page').removeClass().addClass('tv-direct');
+			      $('body #menu-head h1').empty().append('Tv direct');
+			      $('body #menu-head a#back').attr('data-actt','prog').show();
+			   },
+			   error: function(jqxhr){
+			      alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			   }
+		      });
+               },50);
+		  break;
+		  case 'wth':
+		     loader(3500);
+		     $('body #nav-panel').panel('close');
+                     setTimeout(function(){
+		     $.ajax({
+			   url: 	"http://myprogrammetv.fr/phoneg/weather.php",
+			   dataType:	"html",
+			   async:	true,
+			   success:	function(data){
+			      $('body #page #page-cont').empty().append(data);
+			      $('body #page').removeClass().addClass('weather');
+			      $('body #menu-head h1').empty().append('Météo');
+			      $('body #menu-head a#back').attr('data-actt','prog').show();
+			   },
+			   error: function(jqxhr){
+			      alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			   }
+		      });
+                     },50);
+		  break;
+		  case 'prog':
+		     loader(3500);
+		     $('body #nav-panel').panel('close');
+                     setTimeout(function(){
+		     $.ajax({
+			   url: 	"http://myprogrammetv.fr/phoneg/programme.php",
+			   dataType:	"html",
+			   async:	true,
+			   beforesend: function(){
+			   },
+			   success:	function(data){
+			      $('body #page #page-cont').empty().append(data);
+			      $('body #page').removeClass().addClass('programme');
+			      $('body #menu-head h1').empty().append('Programme');
+			      $('body #menu-head a#back').attr('data-actt','prog').hide();
+			      setTimeout(function(){
+				 ddate.jumpTo(dpoos);
+				 ttime.jumpTo(poos);
+			      },150);
+			   },
+			   error: function(jqxhr){
+			      alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			   }
+		      });
+                     },50);
+		  break;
+		  case 'chan':
+		     $('body #nav-panel').panel('close');
+		     var id = $('#page.show-sh .show-chans').data('id');
+		     loader(3500);
+		     $.ajax({
+			     url: 	"http://myprogrammetv.fr/phoneg/chans.php?chan="+id,
+			     dataType:	"html",
+			     async:	true,
+			     success:	function(data){
+				$('body #page #page-cont').empty().append(data);
+				$('body #page').removeClass().addClass('channel');
+				$('body #menu-head h1').empty().append('Chaines');
+				$('body #menu-head a#back').attr('data-actt','prog').show();
+				setTimeout(function(){
+				   ddate.jumpTo(dpoos);
+				   ttime.jumpTo(poos);
+				},150);
+			     return false;
+			     },
+			     error: function(jqxhr){
+				alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			     }
+			});
+		     return false;
+		  break;
+		  case 'sports':
+		     $('body #nav-panel').panel('close');
+		     loader(3500);
+		     $.ajax({
+			     url: 	"sports.html",
+			     dataType:	"html",
+			     async:	true,
+			     success:	function(data){
+				$('body #page #page-cont').empty().append(data);
+				$('body #page').removeClass().addClass('sports');
+				$('body #menu-head h1').empty().append('« Résultats sportifs »');
+				$('body #menu-head a#back').attr('data-actt','prog').show();
+				setTimeout(function(){
+				   ddate.jumpTo(dpoos);
+				   ttime.jumpTo(poos);
+				},150);
+			     return false;
+			     },
+			     error: function(jqxhr){
+				alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			     }
+			});
+		     return false;
+		  break;
+		  case 'radio':
+		     $('body #nav-panel').panel('close');
+		    loader(3500);
+		     $.ajax({
+			     url: 	"radio.html",
+			     dataType:	"html",
+			     async:	true,
+			     success:	function(data){
+				$('body #page #page-cont').empty().append(data);
+				$('body #page').removeClass().addClass('radio');
+				$('body #menu-head h1').empty().append('Toutes vos radios préférées');
+				$('body #menu-head a#back').attr('data-actt','prog').show();
+				setTimeout(function(){
+				   ddate.jumpTo(dpoos);
+				   ttime.jumpTo(poos);
+				},150);
+			     return false;
+			     },
+			     error: function(jqxhr){
+				alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			     }
+			});
+		     return false;
+		  break;
+	       } // end switch
+	    }//end function
+
+	 
+	 //*** HERE GOES ALL ACTIONS ***//
+	 $(window).load(function(){
+	    
+	    setTimeout(function(){$('#spinner').show(); /*$('#innersp-activ').css({width:'0px'});*/},5000);
+	    $('#innersp-activ').css({width:'100%'});
+	    
+	    $.ajax({
+	       url: 	"http://myprogrammetv.fr/phoneg/programme.php",
+	       dataType:	"html",
+	       async:	true,
+	       success:	function(data){
+		  $('body #page #page-cont').empty().append(data);
+		  $('body #page').removeClass().addClass('programme');
+		  $('body #menu-head h1').empty().append('Programme');
+		  setTimeout(function(){
+		     ddate.jumpTo(dpoos);
+		     ttime.jumpTo(poos);
+		  },150);	
+	       },
+	       error: function(jqxhr){
+		  alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+	       }
+	  });
+	    
+	    
+	     function effectiveDeviceWidth() {
+		  var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;
+		  if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio) {
+		      deviceWidth = deviceWidth / window.devicePixelRatio;
+		  }
+		  return deviceWidth;
+	      }
+	      function effectiveDeviceHeight() {
+		  var deviceHeight = window.orientation == 0 ? window.screen.height : window.screen.width;
+		  if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio) {
+		      deviceHeight = deviceHeight / window.devicePixelRatio;
+		  }
+		  return deviceHeight;
+	      }
+
+	 });
+	 
+	 
+	 $(document).on('click ','#menu-head a#back', function(){
+	    
+		  action = $('body #page').attr('class');
+		  switch(action){
+		     case 'chaninfo':
+			goo('tvd');
+		     break;
+		     case 'tv-direct':
+		     case 'weather':
+		     case 'show':
+		     case 'channel':
+		     case 'sports':
+		     case 'radio':
+			goo('prog');
+		     break;
+		     case "show-sh":
+			goo('chan');
+		     break;
+		  }//end switch
+	    //},500);
+	 });
+	 
+	$(document).on('click', '#days-menu-car .lipr a', function(){
+		var dt = $(this).data('date');
+		loader(3500);
+		$.ajax({
+			   url: 	"http://myprogrammetv.fr/phoneg/programme.php?dt="+dt,
+			   dataType:	"html",
+			   async:	true,
+			   success:	function(data){
+			      $('body #page #page-cont').empty().append(data);
+			      $('body #page').removeClass().addClass('programme');
+			      $('body #menu-head h1').empty().append('Programme');
+			      $('body #menu-head a#back').attr('data-actt','prog').hide();
+			      setTimeout(function(){
+				 ddate.jumpTo(dpoos);
+				 ttime.jumpTo(poos);
+			      },150);
+			   return false;
+			   },
+			   error: function(jqxhr){
+			      alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			   }
+		      });
+		return false;
+	});	
+	$(document).on('click ', '#hours-menu-car .slipr a', function(){
+		var dt = $(this).data('date');
+		var tm = $(this).data('tm');
+		loader(3500);
+		$.ajax({
+			url: 	"http://myprogrammetv.fr/phoneg/programme.php?dt="+dt+"&tm="+tm,
+			dataType:	"html",
+			async:	true,
+			success:	function(data){
+			   $('body #page #page-cont').empty().append(data);
+			   $('body #page').removeClass().addClass('programme');
+			   $('body #menu-head h1').empty().append('Programme');
+			   $('body #menu-head a#back').attr('data-actt','prog').hide();
+			   setTimeout(function(){
+			      ddate.jumpTo(dpoos);
+			      ttime.jumpTo(poos);
+			   },150);   
+			return false;
+			},
+			error: function(jqxhr){
+			   alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			}
+		   });
+		return false;
+	});
+	
+	$(document).on('click ', '#days-menu-chan .lipr a', function(){
+	       loader(3500);
+		var dt = $(this).data('date');
+		$.ajax({
+			   url: 	"http://myprogrammetv.fr/phoneg/chans.php?chan="+chn+"&dt="+dt,
+			   dataType:	"html",
+			   async:	true,
+			   success:	function(data){
+			      $('body #page #page-cont').empty().append(data);
+			      $('body #page').removeClass().addClass('channel');
+			      $('body #menu-head h1').empty().append('Chaines');
+			      $('body #menu-head a#back').attr('data-actt','prog').show();
+			      setTimeout(function(){
+				 cddate.jumpTo(dpoos);
+				 ctime.jumpTo(poos);
+			      },150);
+			   return false;
+			   },
+			   error: function(jqxhr){
+			      alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			   }
+		      });
+		return false;
+	});	
+	$(document).on('click ', '#hours-menu-chan .slipr a', function(){
+	       loader(3500);
+		var dt = $(this).data('date');
+		var tm = $(this).data('tm');
+		$.ajax({
+			url: 	"http://myprogrammetv.fr/phoneg/chans.php?chan="+chn+"&dt="+dt+"&tm="+tm+"#period",
+			dataType:	"html",
+			async:	true,
+			success:	function(data){
+			   $('body #page #page-cont').empty().append(data);
+			   $('body #page').removeClass().addClass('channel');
+			   $('body #menu-head h1').empty().append('Chaines');
+			   $('body #menu-head a#back').attr('data-actt','prog').show();
+			   setTimeout(function(){
+			      cddate.jumpTo(dpoos);
+			      ctime.jumpTo(poos);
+			   },150);
+			return false;
+			},
+			error: function(jqxhr){
+			   alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			}
+		   });
+		return false;
+	});
+	$(document).on('click ', '#car .tvchannels a, .tvshows-txt-right a,.chans-mainimg a', function(){
+		var id = $(this).data('id');
+		loader(3500);
+		$.ajax({
+			url: 	"http://myprogrammetv.fr/phoneg/chans.php?chan="+id,
+			dataType:	"html",
+			async:	true,
+			success:	function(data){
+			   $('body #page #page-cont').empty().append(data);
+			   $('body #page').removeClass().addClass('channel');
+			   $('body #menu-head h1').empty().append('Chaines');
+			   $('body #menu-head a#back').attr('data-actt','prog').show();
+			   setTimeout(function(){
+			      cddate.jumpTo(dpoos);
+			      ctime.jumpTo(poos);
+			   },150);
+			return false;
+			},
+			error: function(jqxhr){
+			   alert("\t\tDésolé\n\r\t\t\t\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			}
+		   });
+		return false;
+	});
+	
+	
+	$(document).on('click','#hours-menu-car .owl-buttons .ph-prev', function(e){
+	    e.preventDefault();
+	    if (!$(this).hasClass('disabled')) {
+	       setTimeout(function(){
+		     ttime.jumpTo(parseInt(ttime.currentItem-1));
+	       },100);
+	    }
+	 });
+	$(document).on('click','#hours-menu-car .owl-buttons .ph-next', function(e){
+	    e.preventDefault();
+	    if (!$(this).hasClass('disabled')) {
+	       setTimeout(function(){
+		  ttime.jumpTo(parseInt(ttime.currentItem+1));
+	       },100);
+	    }   
+	 });
+	$(document).on('click','#days-menu-car .owl-buttons .pd-prev', function(e){
+	    e.preventDefault();
+	    if (!$(this).hasClass('disabled')) {
+	       setTimeout(function(){
+	       ddate.jumpTo(parseInt(ddate.currentItem-1));
+	       },100);
+	    }   
+	 });
+	$(document).on('click','#days-menu-car .owl-buttons .pd-next', function(e){
+	    e.preventDefault();
+	    if (!$(this).hasClass('disabled')) {
+	       setTimeout(function(){
+		  ddate.jumpTo(parseInt(ddate.currentItem+1));
+	       },100);
+	    }
+	 });
+	$(document).on('click','#hours-menu-chan .owl-buttons .ch-prev', function(e){
+	    e.preventDefault();
+	    if (!$(this).hasClass('disabled')) {
+	       setTimeout(function(){
+	       ctime.jumpTo(parseInt(ctime.currentItem-1));
+	       },100);
+	    }   
+	 });
+	$(document).on('click','#hours-menu-chan .owl-buttons .ch-next', function(e){
+	    e.preventDefault();
+	    if (!$(this).hasClass('disabled')) {
+	       setTimeout(function(){
+		  ctime.jumpTo(parseInt(ctime.currentItem+1));
+	       },100);
+	    }   
+	 });
+	$(document).on('click','#days-menu-chan .owl-buttons .cd-prev', function(e){
+	    e.preventDefault();
+	    if (!$(this).hasClass('disabled')) {
+	       setTimeout(function(){
+	       cddate.jumpTo(parseInt(cddate.currentItem-1));
+	       },100);
+	    }
+	 });
+	$(document).on('click','#days-menu-chan .owl-buttons .cd-next', function(e){
+	    e.preventDefault();
+	    if (!$(this).hasClass('disabled')) {
+	       setTimeout(function(){
+		  cddate.jumpTo(parseInt(cddate.currentItem+1));
+	       },100);
+	    }
+	 });
+	$(document).on(' click','body #page .chhh',function(e){
+	 chann($(this).data('id'));
+	 });
+	    function chann(idd){
+		var id = idd;
+		loader(3500);
+		$.ajax({
+			url: 	"http://myprogrammetv.fr/phoneg/chans.php?chan="+id+"&dt="+dt+"&tm="+tm+"#period",
+			dataType:	"html",
+			async:	true,
+			success:	function(data){
+			   $('body #page #page-cont').empty().append(data);
+			   $('body #page').removeClass().addClass('channel');
+			   $('body #menu-head h1').empty().append('Chaines');
+			   $('body #menu-head a#back').attr('data-actt','prog').show();
+			   setTimeout(function(){
+			      cddate.jumpTo(dpoos);
+			      ctime.jumpTo(poos);
+			   },150);
+			return false;
+			},
+			error: function(jqxhr){
+			   alert("\t\tDésolé\n\r\t\t\t\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			}
+		   });
+		return false;
+	}
+	 
+   $(document).on('click ', '.show-count, .tvshows-img a, .tvshows-txt-left a', function(){
+	$.ajax({
+			url: 'http://myprogrammetv.fr/phoneg/ops.php',
+			dataType: 'json',
+			data: 'act=counts&id='+$(this).data('id'),
+			success: function(data){
+				
+			}
+		});
+	loader(3500);
+	$.ajax({
+		url: 	"http://myprogrammetv.fr/phoneg/show.php?show="+$(this).data('id'),
+		dataType:	"html",
+		async:	true,
+		async:		false,
+		beforesend:	function(){
+		},
+		success:	function(data){
+		   $('body #page #page-cont').empty().append(data);
+		   $('body #page').removeClass().addClass('show');
+		   setTimeout(function(){
+		   $('body #menu-head a#back').attr('data-actt','show').show();
+		   },200);
+		},
+		error: function(jqxhr){
+		   alert("Can't connect to server !");
+		}
+	});
+   });
+   
+   $(document).on('click ', '.show-count-sh', function(){
+	$.ajax({
+			url: 'http://myprogrammetv.fr/phoneg/ops.php',
+			dataType: 'json',
+			data: 'act=counts&id='+$(this).data('id'),
+			success: function(data){
+				
+			}
+		});
+	loader(3500);
+	$.ajax({
+		url: 	"http://myprogrammetv.fr/phoneg/show.php?show="+$(this).data('id'),
+		dataType:	"html",
+		async:		false,
+		beforesend:	function(){
+		},
+		success:	function(data){
+		   $('body #page #page-cont').empty().append(data);
+		   $('body #page').removeClass().addClass('show-sh');
+		   setTimeout(function(){
+		   $('body #menu-head a#back').attr('data-actt','show-sh').show();
+		   },200);
+		},
+		error: function(jqxhr){
+		   alert("Can't connect to server !");
+		}
+	});
+   });
+		   $(document).on('click ','#pagination.owl-carousel .owl-next',function() {
+		   changePage('next');
+		   });	
+		   $(document).on('click ','#pagination.owl-carousel .owl-prev',function() {
+		   changePage('prev');
+		   });
+   function getNewVal(sel){
+	   var value = sel.value;
+	   var queryParameters = {}, queryString = location.search.substring(1), re = /([^&=]+)=([^&]*)/g, m;
+    
+	   // Creates a map with the query string parameters
+	   while (m = re.exec(queryString)) {
+	       queryParameters[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+	   }
+	   queryParameters['sort'] = value;
+	   location.search = $.param(queryParameters);
+   }
+   function changepage(sel){
+	   var value = sel;
+	   loader(3500);
+	   $.ajax({
+		   url: 	"http://myprogrammetv.fr/phoneg/programme.php?dt="+dt+"&tm="+tm+"&p="+value,
+		   dataType:	"html",
+		   async:	true,
+		   beforesend:	function(){
+		   },
+		   success:	function(data){
+		      $('body #page #page-cont').empty().append(data);
+		      $('body #page').removeClass().addClass('programme');
+		      $('body #menu-head a#back').attr('data-actt','prog').hide();
+		      setTimeout(function(){
+			ddate.jumpTo(dpoos);
+			ttime.jumpTo(poos);
+		     },150);
+		   },
+		   error: function(jqxhr){
+		      alert("Can't connect to server !");
+		   }
+	   });
+   }
+   function changePage(sel){
+	   
+	   var act = sel;
+	   switch(act){
+		   case 'prev':
+			   var vall = pageno - 1;
+		   break;
+		   case 'next':
+			   var vall = pageno + 1;
+		   break;
+	   }
+	   $.ajax({
+		   url: 	"http://myprogrammetv.fr/phoneg/programme.php?dt="+dt+"&tm="+tm+"&p="+vall,
+		   dataType:	"html",
+		   async:	true,
+		   beforesend:	function(){
+		   },
+		   success:	function(data){
+		      $('body #page #page-cont').empty().append(data);
+		      $('body #page').removeClass().addClass('programme');
+		      $('body #menu-head a#back').attr('data-actt','prog').hide();
+		      setTimeout(function(){
+			ddate.jumpTo(dpoos);
+			ttime.jumpTo(poos);
+		     },150);
+		   },
+		   error: function(jqxhr){
+		      alert("Can't connect to server !");
+		   }
+	   });
+   }
+      $(function() {
+
+	// Find all YouTube videos
+	var $allVideos = $("iframe[src^='http://www.youtube.com']"),
+
+	    // The element that is fluid width
+	    $fluidEl = $("#page.show .iframe");
+
+	// Figure out and save aspect ratio for each video
+	$allVideos.each(function() {
+
+		$(this)
+			.data('aspectRatio', this.height / this.width)
+			
+			// and remove the hard coded width/height
+			.removeAttr('height')
+			.removeAttr('width');
+	       var newWidth = $fluidEl.width();
+		
+		// Resize all videos according to their own aspect ratio
+		
+
+			var $el = $(this);
+			$el
+				.width(newWidth)
+				.height(newWidth * $el.data('aspectRatio'));
+
+		
+	});
+	
+	});
+      
+      function loader(delay){
+	  $(window).scrollTop(0);
+	 $('body #zload').css({zIndex:9990});
+	
+	 //setTimeout(function(){
+	 //   $('body #zload').css({zIndex:-1});
+	 //},delay);
+      }
+      
+      function fakeClick(event, anchorObj) {
+	 if (anchorObj.click) {
+	   anchorObj.click()
+	 } else if(document.createEvent) {
+	   if(event.target !== anchorObj) {
+	     var evt = document.createEvent("MouseEvents"); 
+	     evt.initMouseEvent("click", true, true, window, 
+		 0, 0, 0, 0, 0, false, false, false, false, 0, null); 
+	     var allowDefault = anchorObj.dispatchEvent(evt);
+	     // you can check allowDefault for false to see if
+	     // any handler called evt.preventDefault().
+	     // Firefox will *not* redirect to anchorObj.href
+	     // for you. However every other browser will.
+	   }
+	 }
+       }
+       
+ 
+       
+	 </script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+   </BODY>
+   
+</HTML>
