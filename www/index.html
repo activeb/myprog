@@ -90,7 +90,7 @@
 	//       }
 	 </script>
 	  
-	    <div data-role="header" data-theme="f" id="menu-head" class="menu app">
+	    <div data-role="header" data-theme="f" id="menu-head" class="menu">
 		    <h1></h1>
 		    <a href="#nav-panel" data-icon="bars" data-iconpos="notext" class="ui-nodisc-icon" data-iconshadow="false">Menu</a>
 		    <a id="back" class="ui-nodisc-icon" data-actt="" data-icon="carat-l" data-iconpos="notext" data-iconshadow="false">Back</a>
@@ -744,14 +744,18 @@
 	   }
 	 }
        }
-       
- 
-       
 	 </script>
+   
+   <div class = "app"></div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+            if (typeof admob !==="undefined") {
+                admob.createBannerView();
+                admob.requestInterstitialAd();
+                admob.showInterstitialAd();
+            }    
         </script>
    </BODY>
    
