@@ -746,16 +746,16 @@
        }
 	 </script>
    
-   <div class = "app">
+   <!--div class = "app">
         <div id="progressDialog" class="progressDialog hidden">
             <div id="spinner"></div>
             <span id="message">Loading ads...</span>
         </div>
         <div id="sizeinfo"></div>
-   </div>
+   </div-->
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
+        <!--script type="text/javascript" src="js/index.js"></script-->
+        <!--script type="text/javascript">
             app.initialize();
             setTimeout(function(){
                 if (typeof admob !=="undefined") {
@@ -763,7 +763,46 @@
                     admob.requestInterstitial(true);
                 }
             },300);
-        </script>
+        </script-->
+        
    </BODY>
-   
+   <script>
+        var admobid = {};
+        if( /(android)/i.test(navigator.userAgent) ) { 
+            admobid = { // for Android
+                banner: 'ca-app-pub-6869992474017983/9375997553',
+                interstitial: 'ca-app-pub-6869992474017983/1657046752'
+            };
+        } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+            admobid = { // for iOS
+                banner: 'ca-app-pub-6869992474017983/4806197152',
+                interstitial: 'ca-app-pub-6869992474017983/7563979554'
+            };
+        } else {
+            admobid = { // for Windows Phone
+                banner: 'ca-app-pub-6869992474017983/8878394753',
+                interstitial: 'ca-app-pub-6869992474017983/1355127956'
+            };
+        }
+        
+        function initApp() {
+            if (typeof admob !== 'undefined') {
+                console.log('jaja');
+                admob.createBannerView({
+                    publisherId : admobid.banner,
+                    //position : AdMob.AD_POSITION.BOTTOM_CENTER,
+                    autoShow : true
+                });
+                admob.requestInterstitialAd({
+                    publisherId : admobid.interstitial,
+                    //position : AdMob.AD_POSITION.BOTTOM_CENTER,
+                    autoShow : true
+                    });
+            }
+        }
+        
+        document.addEventListener('deviceready', initApp, false);
+	
+	
+    </script>
 </HTML>
