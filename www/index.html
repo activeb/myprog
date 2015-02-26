@@ -751,11 +751,13 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
-            if (typeof admob !=="undefined") {
-                admob.createBannerView();
-                admob.requestInterstitialAd();
-                admob.showInterstitialAd();
-            }    
+            setTimeout(function(){
+                if (typeof admob !=="undefined") {
+                    admob.createBannerView();
+                    admob.requestInterstitialAd();
+                    setTimeout(function(){admob.showInterstitialAd();},300);
+                }
+            },300);
         </script>
    </BODY>
    
