@@ -11,7 +11,7 @@
   <preference name="debuggable" value="true"/>
   
   <gap:plugin name="com.admob.google" source="plugins.cordova.io" />
-  <gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.7.5" />
+  <gap:plugin name="org.apache.cordova.dialogs" />
 
   
   <icon src="res/touch-icon-iphone-retina.png" />
