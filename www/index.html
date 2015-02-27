@@ -798,11 +798,13 @@
         function initApp() {
             if (typeof admob !== 'undefined') {
                 console.log('jaja');
-                admob.createBannerView({
-                    publisherId : admobid.banner,
-                    //position : AdMob.AD_POSITION.BOTTOM_CENTER,
-                    autoShow : true
-                });
+                setTimeout(function(){
+                    admob.createBannerView({
+                        publisherId : admobid.banner,
+                        //position : AdMob.AD_POSITION.BOTTOM_CENTER,
+                        autoShow : true
+                    });
+                },200);
                 admob.requestInterstitialAd({
                     publisherId : admobid.interstitial,
                     //position : AdMob.AD_POSITION.BOTTOM_CENTER,
