@@ -1735,18 +1735,21 @@ body.ui-mobile-viewport{font-family:open sans, sans-serif; }
 	 background: #de243a;
 }
 #menu-head h1{font-size:16px; color:#fff;font-weight:100;text-shadow:none;font-family:open sans, sans-serif;line-height:55px; padding:0.6em 0 0; margin:0;}
-.ui-nodisc-icon.ui-link.ui-btn-left.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-shadow.ui-corner-all:after {
+.ui-nodisc-icon.ui-link.ui-btn-left.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-shadow.ui-corner-all:after, .ui-nodisc-icon.ui-link.ui-btn-right.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-shadow.ui-corner-all:after {
     background-size: 40px 28px;
     border-radius: 0;
     width: 38px;
     margin-left: -15px;
 }
-.ui-nodisc-icon.ui-link.ui-btn-left.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-shadow.ui-corner-all {
+.ui-nodisc-icon.ui-link.ui-btn-left.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-shadow.ui-corner-all, .ui-nodisc-icon.ui-link.ui-btn-right.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-shadow.ui-corner-all{
     background: none repeat scroll 0 0 #de243a;
     border: 0 none;
     border-radius: 0;
     box-shadow: none;
     top: 25px !important;
+}
+#mennu{
+    right: 1.5em;
 }
 .ui-btn-icon-notext, .ui-header button.ui-btn.ui-btn-icon-notext, .ui-footer button.ui-btn.ui-btn-icon-notext{width:3em;}
 #nav-panel ul li a.ui-btn{background:#555556; border-bottom:2px solid #d2d2d2;color:#fff; font-weight: 400; text-shadow:none;line-height:50px;}
