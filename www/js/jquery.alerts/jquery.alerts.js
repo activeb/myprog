@@ -82,7 +82,7 @@
 			
 			// IE6 Fix
 			//var pos = ($.browser.msie && parseInt($.browser.version) <= 6 ) ? 'absolute' : 'fixed'; 
-			
+			var pos = 'fixed';
 			$("#popup_container").css({
 				position: pos,
 				zIndex: 99999,
