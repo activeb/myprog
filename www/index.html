@@ -152,7 +152,7 @@
 			      $('body #menu-head a#back').attr('data-actt','prog').show();
 			   },
 			   error: function(jqxhr){
-                            navigator.notification.alert('n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
+                            navigator.notification.alert('\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
 
 			     // alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
 			   }
@@ -174,7 +174,7 @@
 			      $('body #menu-head a#back').attr('data-actt','prog').show();
 			   },
 			   error: function(jqxhr){
-			      alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			      navigator.notification.alert('\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
 			   }
 		      });
                      },50);
@@ -200,7 +200,7 @@
 			      },150);
 			   },
 			   error: function(jqxhr){
-			      alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			      navigator.notification.alert('\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
 			   }
 		      });
                      },50);
@@ -225,7 +225,7 @@
 			     return false;
 			     },
 			     error: function(jqxhr){
-				alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+				navigator.notification.alert('\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
 			     }
 			});
 		     return false;
@@ -249,7 +249,7 @@
 			     return false;
 			     },
 			     error: function(jqxhr){
-				alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+				navigator.notification.alert('\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
 			     }
 			});
 		     return false;
@@ -273,7 +273,7 @@
 			     return false;
 			     },
 			     error: function(jqxhr){
-				alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+				navigator.notification.alert('\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
 			     }
 			});
 		     return false;
@@ -302,7 +302,7 @@
 		  },150);	
 	       },
 	       error: function(jqxhr){
-		  alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+		  navigator.notification.alert('\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
 	       }
 	  });
 	    
@@ -366,7 +366,7 @@
 			   return false;
 			   },
 			   error: function(jqxhr){
-			      alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			      navigator.notification.alert('\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
 			   }
 		      });
 		return false;
@@ -391,7 +391,7 @@
 			return false;
 			},
 			error: function(jqxhr){
-			   alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			   navigator.notification.alert('\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
 			}
 		   });
 		return false;
@@ -416,7 +416,7 @@
 			   return false;
 			   },
 			   error: function(jqxhr){
-			      alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			      navigator.notification.alert('\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
 			   }
 		      });
 		return false;
@@ -441,7 +441,7 @@
 			return false;
 			},
 			error: function(jqxhr){
-			   alert("\t\t\tDésolé\n\r\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !");
+			   navigator.notification.alert('\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
 			}
 		   });
 		return false;
@@ -589,7 +589,8 @@
 		   },200);
 		},
 		error: function(jqxhr){
-		   alert("Can't connect to server !");
+		   navigator.notification.alert('\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
+
 		}
 	});
    });
@@ -618,7 +619,8 @@
 		   },200);
 		},
 		error: function(jqxhr){
-		   alert("Can't connect to server !");
+		   navigator.notification.alert('\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
+
 		}
 	});
    });
@@ -658,7 +660,8 @@
 		     },150);
 		   },
 		   error: function(jqxhr){
-		      alert("Can't connect to server !");
+		      navigator.notification.alert('\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
+
 		   }
 	   });
    }
@@ -689,7 +692,8 @@
 		     },150);
 		   },
 		   error: function(jqxhr){
-		      alert("Can't connect to server !");
+		      navigator.notification.alert('\n\r\tLa connexion au serveur est impossible, vérifiez votre connexion internet ou revenez ultérieurement !\n\r', alrt , "Désolé", "D'accord");
+
 		   }
 	   });
    }
