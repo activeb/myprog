@@ -293,7 +293,7 @@
 	    
 	    setTimeout(function(){$('#spinner').show(); /*$('#innersp-activ').css({width:'0px'});*/},5000);
 	    $('#innersp-activ').css({width:'100%'});
-	    
+	    $('#menu-head.ui-fixed-hidden').css("position","unset");
 	    $.ajax({
 	       url: 	"http://myprogrammetv.fr/phoneg/programme.php",
 	       dataType:	"html",
