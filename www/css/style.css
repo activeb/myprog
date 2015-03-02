@@ -2097,5 +2097,5 @@ body #menu-head.menu/*, body #nav-panel*/{
 	background: #bbb;
 }
 .ui-fixed-hidden{
-    position:unset;
+    position:unset !important;
 }
